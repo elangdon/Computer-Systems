@@ -1,0 +1,19 @@
+EAX : accumulator : used for performing calculations, and used to store return values from function calls. Basic operations such as add, subtract, compare use this general-purpose register
+EBX : base (does not have anything to do with base pointer). It has no general purpose and can be used to store data.
+ECX : counter : used for iterations. ECX counts downward.
+EDX : data : this is an extension of the EAX register. It allows for more complex calculations (multiply, divide) by allowing extra data to be stored to facilitate those calculations.
+ESP : stack pointer
+EBP : base pointer
+ESI : source index : holds location of input data
+EDI : destination index  : points to location of where result of data operation is stored
+EIP : instruction pointer
+
+
+c7 05 04 d1 04 08 a6 71 06 16 68 ed 8b 04 08 c3
+c7 05 04 d1 04 08 a6 71 06 16 c7 05 00 b7 ff bf ed 8b 04 08 c3
+
+b8 a6 71 06 16 bd f0 3c 68 55 68 94 8d 04 08 c3
+16
+
+
+

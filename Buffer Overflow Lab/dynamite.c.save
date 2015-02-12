@@ -1,0 +1,5 @@
+
+asm(    "movl  $0x160671a6 , %eax\n\t"
+	"push
+        "ret"
+   ); 

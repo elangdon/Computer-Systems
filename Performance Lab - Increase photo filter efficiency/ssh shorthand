@@ -1,0 +1,13 @@
+ls -al .ssh
+emacs .ssh/config
+
+Host whatyouname
+	HostName address.com
+	User name
+	Port xx
+
+
+
+screen
+tmocs
+byobu
